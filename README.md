@@ -3,9 +3,10 @@ NeoLauncher
 
 Launcher/patcher for Tribes Vengeance
 
-All of the urls are configurable in settings file without need for recompilation.
+All of the urls are configurable in settings file without need for recompilation
 
 Pulls news from http://tribesrevengeance.com/patcher/news.html
+
 Pulls info from http://tribesrevengeance.com/patcher/info.xml
 
 Info is xml document with 
