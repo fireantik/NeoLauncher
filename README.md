@@ -9,11 +9,13 @@ Pulls news from http://tribesrevengeance.com/patcher/news.html
 Pulls info from http://tribesrevengeance.com/patcher/info.xml
 
 Info is xml document with 
-  <?xml version="1.0" encoding="UTF-8"?>
-  <Info>
-  	<Version>1</Version>
-  	<DownloadUrl>http://tribesrevengeance.com/patcher/1.zip</DownloadUrl>
-  </Info>
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<Info>
+	<Version>1</Version>
+	<DownloadUrl>http://tribesrevengeance.com/patcher/1.zip</DownloadUrl>
+</Info>
+```
 
 If version > version in settings => download file from DownloadUrl and extract it into root tribes directory.
 
