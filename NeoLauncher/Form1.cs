@@ -27,6 +27,8 @@ namespace NeoLauncher
 
         public Form1()
         {
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
             WebRequest.DefaultWebProxy = null;
             InitializeComponent();
         }
@@ -37,14 +39,16 @@ namespace NeoLauncher
             TV_CD_DVD = new FileInfo("tv_cd_dvd.exe");
             Root = TV_CD_DVD.Directory.Parent.Parent;
 
+#if !DEBUG
             if (!TV_CD_DVD.Exists)
             {
                 MessageBox.Show("tv_cd_dvd.exe not found\nPlease place this launcher into same directory as your game executable!");
                 Close();
                 return;
             }
-
+#endif
             webBrowser1.Url = new Uri(Settings.Default.NewsUrl, UriKind.Absolute);
+            //webBrowser1.Url = new Uri("http://tribesrevengeance.com", UriKind.Absolute);
 
 
             InfoDownloader.DownloadProgressChanged += ShowProgress;
@@ -107,11 +111,11 @@ namespace NeoLauncher
 
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
-            if (e.Url.AbsoluteUri != Settings.Default.NewsUrl)
+            /*if (e.Url.AbsoluteUri != Settings.Default.NewsUrl)
             {
                 e.Cancel = true;
                 Process.Start(e.Url.ToString());
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)
