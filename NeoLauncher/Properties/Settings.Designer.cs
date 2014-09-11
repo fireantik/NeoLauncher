@@ -25,7 +25,7 @@ namespace NeoLauncher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://tribesrevengeance.com/patcher/news.html")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://tribesrevengeance.com/patcher/news.php")]
         public string NewsUrl {
             get {
                 return ((string)(this["NewsUrl"]));
@@ -56,6 +56,30 @@ namespace NeoLauncher.Properties {
             }
             set {
                 this["CurrentVersion"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://tribesrevengeance.com")]
+        public string Link {
+            get {
+                return ((string)(this["Link"]));
+            }
+            set {
+                this["Link"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://forums.tribesrevengeance.com")]
+        public string ForumsLink {
+            get {
+                return ((string)(this["ForumsLink"]));
+            }
+            set {
+                this["ForumsLink"] = value;
             }
         }
     }

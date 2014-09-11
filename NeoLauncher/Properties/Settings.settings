@@ -3,13 +3,19 @@
   <Profiles />
   <Settings>
     <Setting Name="NewsUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://tribesrevengeance.com/patcher/news.html</Value>
+      <Value Profile="(Default)">http://tribesrevengeance.com/patcher/news.php</Value>
     </Setting>
     <Setting Name="InfoUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://tribesrevengeance.com/patcher/info.xml</Value>
     </Setting>
     <Setting Name="CurrentVersion" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="Link" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://tribesrevengeance.com</Value>
+    </Setting>
+    <Setting Name="ForumsLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://forums.tribesrevengeance.com</Value>
     </Setting>
   </Settings>
 </SettingsFile>

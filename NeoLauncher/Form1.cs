@@ -111,17 +111,27 @@ namespace NeoLauncher
 
         private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
         {
-            /*if (e.Url.AbsoluteUri != Settings.Default.NewsUrl)
+            if (e.Url.AbsoluteUri != Settings.Default.NewsUrl)
             {
                 e.Cancel = true;
                 Process.Start(e.Url.ToString());
-            }*/
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Process.Start(TV_CD_DVD.FullName, "-console");
             Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Settings.Default.Link);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(Settings.Default.ForumsLink);
         }
 
         void Extract()
